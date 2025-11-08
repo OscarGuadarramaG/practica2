@@ -25,13 +25,13 @@
       box-shadow: inset 0 0 100px rgba(0,122,255,0.1);
     }
     .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 600;
+      font-size: 3.2rem;
+      font-weight: 700;
       margin-bottom: 20px;
       color: #000;
     }
     .hero p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin-bottom: 40px;
       color: #666;
       max-width: 600px;
@@ -40,7 +40,7 @@
     }
     .btn {
       display: inline-block;
-      padding: 16px 32px;
+      padding: 14px 30px;
       margin: 10px;
       background-color: #007AFF;
       color: #FFF;
@@ -48,7 +48,7 @@
       border-radius: 30px;
       transition: all 0.4s ease;
       font-weight: 500;
-      font-size: 1.1rem;
+      font-size: 1rem;
       box-shadow: 0 4px 15px rgba(0,122,255,0.3);
     }
     .btn:hover {
@@ -73,7 +73,7 @@
       text-align: center;
     }
     .product h2 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 600;
       margin-bottom: 40px;
       color: #000;
@@ -81,18 +81,18 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 40px;
       max-width: 1100px;
       margin: 0 auto;
     }
     .product-card {
       background-color: #FFF;
-      border-radius: 25px;
+      border-radius: 20px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       overflow: hidden;
-      padding-bottom: 20px;
+      padding-bottom: 25px;
     }
     .product-card:hover {
       transform: translateY(-8px);
@@ -100,18 +100,23 @@
     }
     .product-card img {
       width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-bottom: 1px solid #EEE;
+      max-height: 200px;
+      object-fit: contain;
+      background-color: #fff;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover img {
+      transform: scale(1.05);
     }
     .product-name {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 600;
       color: #000;
       margin-top: 15px;
     }
     .product-price {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: #007AFF;
       margin: 8px 0;
@@ -119,7 +124,7 @@
     .product-desc {
       font-size: 1rem;
       color: #555;
-      margin: 0 20px 15px;
+      margin: 0 20px 10px;
     }
 
     .payment-icons {
@@ -127,14 +132,16 @@
       justify-content: center;
       margin-top: 40px;
       gap: 15px;
+      flex-wrap: wrap;
     }
     .payment-icons img {
-      width: 55px;
+      width: 50px;
       opacity: 0.8;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
     .payment-icons img:hover {
       opacity: 1;
+      transform: scale(1.1);
     }
 
     /* FEATURES */
@@ -144,14 +151,14 @@
       text-align: center;
     }
     .features h2 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 600;
       margin-bottom: 50px;
       color: #000;
     }
     .feature-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
       max-width: 1000px;
       margin: 0 auto;
@@ -168,13 +175,13 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
     .feature h3 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 500;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       color: #000;
     }
     .feature p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #666;
     }
 
@@ -185,13 +192,13 @@
       text-align: center;
     }
     .why-choose h2 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 600;
       margin-bottom: 25px;
       color: #000;
     }
     .why-choose p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       max-width: 700px;
       margin: 0 auto;
       color: #555;
@@ -204,26 +211,26 @@
       text-align: center;
     }
     .contact h2 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 600;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       color: #000;
     }
     .contact p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-bottom: 25px;
       color: #555;
     }
     .whatsapp-btn {
       background-color: #25D366;
       color: #FFF;
-      padding: 16px 32px;
+      padding: 14px 30px;
       border: none;
       border-radius: 30px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       text-decoration: none;
       display: inline-block;
-      margin-top: 25px;
+      margin-top: 15px;
       transition: all 0.4s ease;
       box-shadow: 0 4px 15px rgba(37,211,102,0.3);
     }
@@ -240,9 +247,9 @@
       border-top: 1px solid #E0E0E0;
     }
     .footer p {
-      margin-bottom: 25px;
+      margin-bottom: 0;
       color: #666;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     /* Animación */
@@ -253,9 +260,9 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2.5rem; }
+      .hero h1 { font-size: 2.2rem; }
+      .product-card img { max-height: 160px; }
       .feature-list { grid-template-columns: 1fr; }
-      .product-card img { height: 200px; }
     }
   </style>
 </head>
@@ -264,7 +271,7 @@
   <!-- Hero -->
   <section class="hero">
     <h1>Lleva tu sonido al siguiente nivel.</h1>
-    <p>AirFlow te ofrece AirPods premium con comodidad superior y presentación estilo Apple, diseñados para audiencias exigentes que buscan calidad y diseño.</p>
+    <p>AirFlow te ofrece AirPods premium con comodidad superior y presentación estilo Apple, diseñados para quienes buscan calidad, estilo y excelente precio.</p>
     <a href="#product" class="btn">Ver Producto</a>
     <a href="#contact" class="btn btn-secondary">Contáctanos</a>
   </section>
@@ -275,12 +282,10 @@
 
     <div class="product-grid">
       <div class="product-card">
-        <div class="product-name">AirPods Pro 2</div>
         <img src="https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2022/09/PBI-Apple-AirPods-Pro-2-(2nd-generation).png" alt="AirPods Pro 2">
-        <div class="product-price">$590MXN</div>
-        <p class="product-desc">Cancelación activa de ruido y bolsita estilo Apple incluida. Alta calidad garantizada.</p>
-      </div>
-      </div>
+        <div class="product-name">AirPods Pro 2</div>
+        <div class="product-price">$590 MXN</div>
+        <p class="product-desc">Cancelación activa de ruido, sonido premium y bolsita estilo Apple incluida.</p>
       </div>
     </div>
 
@@ -295,16 +300,16 @@
     <h2>Características Destacadas</h2>
     <div class="feature-list">
       <div class="feature">
-        <h3>Mejor sonido</h3>
-        <p>Calidad de audio excepcional con cancelación de ruido avanzada para una experiencia inmersiva.</p>
+        <h3>Sonido envolvente</h3>
+        <p>Disfruta cada detalle con una calidad de audio impresionante y cancelación avanzada de ruido.</p>
       </div>
       <div class="feature">
-        <h3>Mayor comodidad</h3>
-        <p>Diseño ergonómico y liviano para uso prolongado sin fatiga, inspirado en ergonomía premium.</p>
+        <h3>Comodidad total</h3>
+        <p>Diseño ergonómico y liviano para usar durante horas sin molestias.</p>
       </div>
       <div class="feature">
         <h3>Presentación premium</h3>
-        <p>Empaque elegante con bolsita incluida, reflejando estándares de calidad superiores.</p>
+        <p>Incluye bolsita tipo Apple y empaque elegante que realza la experiencia de compra.</p>
       </div>
     </div>
   </section>
@@ -312,14 +317,14 @@
   <!-- Why Choose Us -->
   <section class="why-choose">
     <h2>Por qué elegirnos</h2>
-    <p>En AirFlow, nos comprometemos con la excelencia. Ofrecemos productos verificados, entrega rápida en todo Tampico y una experiencia que rivaliza con las marcas líderes, todo a un precio accesible. Tu satisfacción es nuestra prioridad.</p>
+    <p>En AirFlow, cuidamos cada detalle. Ofrecemos productos verificados, envío rápido en Tampico y atención personalizada. Calidad, confianza y diseño en un solo lugar.</p>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contáctanos</h2>
-    <p>¿Tienes preguntas? Estamos aquí para ayudarte. Contáctanos por WhatsApp para más información personalizada.</p>
-    <a href="https://wa.me/528333917247?text=Hola,%20me%20interesa%20más%20información%20sobre%20los%20AirPods%20de%20AirFlow" class="whatsapp-btn">Chatear por WhatsApp</a>
+    <p>¿Tienes dudas o quieres hacer tu pedido? Escríbenos por WhatsApp y recibe atención al instante.</p>
+    <a href="https://wa.me/528333917247?text=Hola,%20me%20interesan%20los%20AirPods%20de%20AirFlow" class="whatsapp-btn">Chatear por WhatsApp</a>
   </section>
 
   <!-- Footer -->
@@ -328,4 +333,5 @@
   </footer>
 </body>
 </html>
+
 
