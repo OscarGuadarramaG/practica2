@@ -3,354 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AirFlow - AirPods Premium</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>AirFlow - Tienda Apple</title>
   <style>
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Inter', sans-serif;
+      background-color: #f2f2f2;
       margin: 0;
       padding: 0;
-      background-color: #FFFFFF;
       color: #333;
-      line-height: 1.6;
     }
-    * { box-sizing: border-box; }
-
-    .hero {
-      background: linear-gradient(135deg, #F5F5F5 0%, #E0F7FF 50%, #FFFFFF 100%);
-      padding: 120px 20px;
+    header {
+      background-color: #000;
+      color: white;
       text-align: center;
-      animation: fadeIn 1s ease-in;
-      box-shadow: inset 0 0 100px rgba(0,122,255,0.1);
+      padding: 20px;
     }
-    .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #000;
+    header h1 {
+      margin: 0;
+      font-size: 2em;
     }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      color: #666;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+    main {
+      padding: 20px;
+      text-align: center;
     }
-    .btn {
-      display: inline-block;
-      padding: 14px 30px;
-      margin: 10px;
-      background-color: #007AFF;
-      color: #FFF;
-      text-decoration: none;
-      border-radius: 30px;
-      transition: all 0.4s ease;
-      font-weight: 500;
-      font-size: 1rem;
-      box-shadow: 0 4px 15px rgba(0,122,255,0.3);
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #0056CC;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,122,255,0.4);
-    }
-    .btn-secondary {
-      background-color: transparent;
-      border: 2px solid #007AFF;
-      color: #007AFF;
-    }
-    .btn-secondary:hover {
-      background-color: #007AFF;
-      color: #FFF;
-    }
-
     .product {
-      padding: 100px 20px;
-      background-color: #F9F9F9;
-      text-align: center;
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 15px auto;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 15px;
     }
     .product h2 {
-      font-size: 2.6rem;
-      font-weight: 600;
-      margin-bottom: 40px;
-      color: #000;
+      margin-top: 10px;
     }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .product-card {
-      background-color: #FFF;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      overflow: hidden;
-      padding-bottom: 25px;
-    }
-    .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    }
-    .product-card img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: contain;
-      background-color: #fff;
+    form {
+      background: white;
+      border-radius: 15px;
       padding: 20px;
-      transition: transform 0.3s ease;
+      width: 90%;
+      max-width: 400px;
+      margin: 30px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .product-card:hover img {
-      transform: scale(1.05);
-    }
-    .product-name {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #000;
-      margin-top: 15px;
-    }
-    .product-price {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #007AFF;
-      margin: 8px 0;
-    }
-    .product-desc {
-      font-size: 1rem;
-      color: #555;
-      margin: 0 20px 10px;
-    }
-
-    .payment-icons {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    .payment-icons img {
-      width: 50px;
-      opacity: 0.8;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    .payment-icons img:hover {
-      opacity: 1;
-      transform: scale(1.1);
-    }
-
-    .order {
-      padding: 100px 20px;
-      background-color: #FFFFFF;
-      text-align: center;
-    }
-    .order h2 {
-      font-size: 2.6rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #000;
-    }
-    .order p {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 40px;
-    }
-    .order-form {
-      max-width: 500px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      text-align: left;
-    }
-    .order-form label {
-      font-weight: 500;
-      color: #333;
-    }
-    .order-form input,
-    .order-form select {
-      padding: 12px 15px;
-      border: 1px solid #CCC;
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
       border-radius: 10px;
-      font-size: 1rem;
-      outline: none;
-      transition: border-color 0.3s;
+      border: 1px solid #ccc;
+      font-size: 1em;
     }
-    .order-form input:focus,
-    .order-form select:focus {
-      border-color: #007AFF;
-    }
-
-    .features {
-      padding: 100px 20px;
-      background-color: #FFFFFF;
-      text-align: center;
-    }
-    .features h2 {
-      font-size: 2.6rem;
-      font-weight: 600;
-      margin-bottom: 50px;
-      color: #000;
-    }
-    .feature-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .feature {
-      padding: 30px;
-      border-radius: 20px;
-      background-color: #F5F5F5;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    .feature:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    .feature h3 {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-bottom: 10px;
-      color: #000;
-    }
-    .feature p {
-      font-size: 1rem;
-      color: #666;
-    }
-
-    .why-choose {
-      padding: 100px 20px;
-      background-color: #FFFFFF;
-      text-align: center;
-    }
-    .why-choose h2 {
-      font-size: 2.6rem;
-      font-weight: 600;
-      margin-bottom: 25px;
-      color: #000;
-    }
-    .why-choose p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-      color: #555;
-    }
-
-    .contact {
-      padding: 100px 20px;
-      background-color: #F9F9F9;
-      text-align: center;
-    }
-    .contact h2 {
-      font-size: 2.6rem;
-      font-weight: 600;
-      margin-bottom: 30px;
-      color: #000;
-    }
-    .contact p {
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-      color: #555;
-    }
-    .whatsapp-btn {
-      background-color: #25D366;
-      color: #FFF;
-      padding: 14px 30px;
+    button {
+      background-color: #007aff;
+      color: white;
       border: none;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 15px;
-      transition: all 0.4s ease;
-      box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+      cursor: pointer;
+      transition: 0.3s;
     }
-    .whatsapp-btn:hover {
-      background-color: #128C7E;
-      transform: translateY(-3px);
+    button:hover {
+      background-color: #005ecb;
     }
-
-    .footer {
-      padding: 50px 20px;
-      background-color: #F5F5F5;
-      text-align: center;
-      border-top: 1px solid #E0E0E0;
+    .offers {
+      background-color: #fff;
+      margin: 40px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .footer p {
-      margin-bottom: 0;
-      color: #666;
-      font-size: 1rem;
+    .offers h2 {
+      color: #007aff;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
-      .product-card img { max-height: 160px; }
-      .feature-list { grid-template-columns: 1fr; }
+    .offers p {
+      font-size: 1.1em;
     }
   </style>
 </head>
 <body>
 
-  <section class="hero">
-    <h1>Lleva tu sonido al siguiente nivel.</h1>
-    <p>AirFlow te ofrece AirPods premium con comodidad superior y presentación estilo Apple, diseñados para quienes buscan calidad, estilo y excelente precio.</p>
-    <a href="#product" class="btn">Ver Productos</a>
-    <a href="#order" class="btn btn-secondary">Ordenar Pedido</a>
-  </section>
+  <header>
+    <h1>AirFlow - Productos Premium</h1>
+  </header>
 
-  <section id="product" class="product">
-    <h2>Nuestros Productos</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2022/09/PBI-Apple-AirPods-Pro-2-(2nd-generation).png" alt="AirPods Pro 2">
-        <div class="product-name">AirPods Pro 2</div>
-        <div class="product-price">$590 MXN</div>
-        <p class="product-desc">Cancelación activa de ruido, sonido premium y bolsita estilo Apple incluida.</p>
+  <main>
+    <section id="products">
+      <div class="product">
+        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MQD83?wid=2000&hei=2000&fmt=jpeg&qlt=80&.v=1660803972361" alt="AirPods Pro 2">
+        <h2>AirPods Pro 2</h2>
+        <p><strong>$590 MXN</strong></p>
       </div>
-      <div class="product-card">
-        <img src="https://static.nike.com/a/images/t_default/12952757-8b1b-4d33-8c60-bb0768c0fe10/OPN+AWN+S5+GPS+BAND+44MM+FD.png">
-        <div class="product-name">Apple Watch Series 10 Nike</div>
-        <div class="product-price">$1590 MXN</div>
-        <p class="product-desc">Diseño deportivo, pantalla brillante y compatibilidad total con iPhone. Ideal para tu día a día.</p>
-      </div>
-    </div>
-    <div class="payment-icons"> 
-      <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa">
-      <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard">
-    </div>
-  </section>
 
-  <section id="order" class="order">
-    <h2>Ordena tu pedido</h2>
-    <p>Selecciona tu producto y completa los datos para realizar tu pedido fácilmente.</p>
-    <form id="orderForm" class="order-form">
+      <div class="product">
+        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MR903_AV1?wid=2000&hei=2000&fmt=jpeg&qlt=80&.v=1724618990591" alt="Apple Watch Nike">
+        <h2>Apple Watch Series 10 Nike</h2>
+        <p><strong>$1,590 MXN</strong></p>
+      </div>
+
+      <div class="product">
+        <img src="https://assets.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/noise_cancelling_headphones_700/product_silo_images/NCH700_PDP_Gallery_1200x1200_1.jpg" alt="Bose Studio">
+        <h2>Bose Studio</h2>
+        <p><strong>$1,100 MXN</strong></p>
+      </div>
+
+      <div class="product">
+        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/airpods-4th-gen-2024" alt="AirPods 4 Gen">
+        <h2>AirPods 4th Gen</h2>
+        <p><strong>$800 MXN</strong></p>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61LsY6DgZXL._AC_SL1500_.jpg" alt="Beats Studio">
+        <h2>Beats Studio</h2>
+        <p><strong>$990 MXN</strong></p>
+      </div>
+    </section>
+
+    <form id="orderForm">
+      <h2>Ordena tu producto</h2>
       <label for="productSelect">Selecciona tu producto:</label>
       <select id="productSelect" required>
         <option value="AirPods Pro 2 - $590 MXN">AirPods Pro 2 - $590 MXN</option>
         <option value="Apple Watch Series 10 Nike - $1590 MXN">Apple Watch Series 10 Nike - $1590 MXN</option>
+        <option value="Bose Studio - $1100 MXN">Bose Studio - $1100 MXN</option>
+        <option value="AirPods 4th Gen - $800 MXN">AirPods 4th Gen - $800 MXN</option>
+        <option value="Beats Studio - $990 MXN">Beats Studio - $990 MXN</option>
       </select>
 
-      <label for="name">Tu nombre:</label>
-      <input type="text" id="name" placeholder="Ej. Carlos López" required>
-
-      <label for="city">Ciudad:</label>
-      <input type="text" id="city" placeholder="Ej. Tampico" required>
-
-      <button type="submit" class="btn">Enviar pedido por WhatsApp</button>
+      <input type="text" id="name" placeholder="Tu nombre" required>
+      <input type="text" id="city" placeholder="Ciudad" required>
+      <button type="submit">Enviar por WhatsApp</button>
     </form>
-  </section>
+
+    <section class="offers">
+      <h2>🎉 Ofertas del Mes 🎉</h2>
+      <p>🔥 ¡Aprovecha un <strong>10% de descuento</strong> en todas tus compras mayores a <strong>$1,000 MXN</strong>!</p>
+      <p>💥 Promoción válida hasta el <strong>30 de noviembre</strong>. No te quedes sin tus productos premium al mejor precio.</p>
+    </section>
+  </main>
 
   <script>
     document.getElementById("orderForm").addEventListener("submit", function(e) {
@@ -364,38 +160,6 @@
     });
   </script>
 
-  <section class="features">
-    <h2>Características Destacadas</h2>
-    <div class="feature-list">
-      <div class="feature">
-        <h3>Sonido envolvente</h3>
-        <p>Disfruta cada detalle con una calidad de audio impresionante y cancelación avanzada de ruido.</p>
-      </div>
-      <div class="feature">
-        <h3>Comodidad total</h3>
-        <p>Diseño ergonómico y liviano para usar durante horas sin molestias.</p>
-      </div>
-      <div class="feature">
-        <h3>Presentación premium</h3>
-        <p>Incluye bolsita tipo Apple y empaque elegante que realza la experiencia de compra.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="why-choose">
-    <h2>Por qué elegirnos</h2>
-    <p>En AirFlow, cuidamos cada detalle. Ofrecemos productos verificados, envío rápido en Tampico y atención personalizada. Calidad, confianza y diseño en un solo lugar.</p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contáctanos</h2>
-    <p>¿Tienes dudas o quieres hacer tu pedido? Escríbenos por WhatsApp y recibe atención al instante.</p>
-    <a href="https://wa.me/528333917247?text=Hola,%20me%20interesan%20los%20productos%20de%20AirFlow" class="whatsapp-btn">Chatear por WhatsApp</a>
-  </section>
-
-  <footer class="footer">
-    <p>© 2025 AirFlow — El sonido que mereces. Todos los derechos reservados.</p>
-  </footer>
 </body>
 </html>
 
