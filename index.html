@@ -122,28 +122,6 @@
       color: #007AFF;
       margin: 8px 0;
     }
-    .product-desc {
-      font-size: 1rem;
-      color: #555;
-      margin: 0 20px 10px;
-    }
-
-    .payment-icons {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    .payment-icons img {
-      width: 50px;
-      opacity: 0.8;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    .payment-icons img:hover {
-      opacity: 1;
-      transform: scale(1.1);
-    }
 
     /* OFERTAS */
     .offers {
@@ -157,11 +135,6 @@
       font-size: 2.5rem;
       margin-bottom: 20px;
     }
-    .offers p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
 
     /* ORDER FORM */
     .order {
@@ -174,11 +147,6 @@
       font-weight: 600;
       margin-bottom: 20px;
       color: #000;
-    }
-    .order p {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 40px;
     }
     .order-form {
       max-width: 500px;
@@ -219,10 +187,17 @@
   <section id="product" class="product">
     <h2>Nuestros Productos</h2>
     <div class="product-grid">
+      
       <div class="product-card">
         <img src="https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2022/09/PBI-Apple-AirPods-Pro-2-(2nd-generation).png" alt="AirPods Pro 2">
         <div class="product-name">AirPods Pro 2</div>
         <div class="product-price">$590 MXN</div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/41yhni0GcAL._AC_SX679_.jpg" alt="AirPods Pro 3">
+        <div class="product-name">AirPods Pro 3</div>
+        <div class="product-price">$990 MXN</div>
       </div>
 
       <div class="product-card">
@@ -244,17 +219,18 @@
       </div>
 
       <div class="product-card">
-        <img src="https://i5.walmartimages.com.mx/samsmx/images/product-images/img_large/981035981l.jpg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"Beats Studio">
+        <img src="https://i5.walmartimages.com.mx/samsmx/images/product-images/img_large/981035981l.jpg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Beats Studio">
         <div class="product-name">Beats Studio</div>
         <div class="product-price">$990 MXN</div>
       </div>
+
     </div>
   </section>
 
   <!-- Ofertas -->
   <section class="offers">
     <h2>🎉 Ofertas del Mes 🎉</h2>
-    <p>Aprovecha un <strong>10% de descuento</strong> en compras mayores a $1000 MXN.  
+    <p>Aprovecha un <strong>10% de descuento</strong> en compras mayores a $1000 MXN.</p>
   </section>
 
   <!-- Ordenar Pedido -->
@@ -264,6 +240,7 @@
       <label for="productSelect">Selecciona tu producto:</label>
       <select id="productSelect" required>
         <option value="AirPods Pro 2 - $590 MXN">AirPods Pro 2 - $590 MXN</option>
+        <option value="AirPods Pro 3 - $990 MXN">AirPods Pro 3 - $990 MXN</option>
         <option value="Apple Watch Series 10 Nike - $1590 MXN">Apple Watch Series 10 Nike - $1590 MXN</option>
         <option value="Bose Studio - $1100 MXN">Bose Studio - $1100 MXN</option>
         <option value="AirPods 4th Gen - $800 MXN">AirPods 4th Gen - $800 MXN</option>
